@@ -692,7 +692,7 @@ function loadOverlayContent(typeOfContent, args)
         } else {
             add = "Przegrałeś.";
         }
-        document.getElementById("overlay_content").innerHTML = '<p id="title">Gra dobiegła końca</p><p>' + joinCallCode(args[0]) + '. ' + add + '</p>';
+        document.getElementById("overlay_content").innerHTML = '<p id="title">Gra dobiegła końca</p><p>' + add + '</p>';
         gameEnded = true;
     }
 }
@@ -768,7 +768,7 @@ function createGame()
 
 function listenToGame()
 {
-    CheckShots();
+    checkShots();
     var t = setInterval(function() {
         checkPing();
         $.ajax({ type: "GET",   
@@ -877,7 +877,7 @@ function listenToGame()
     }, 1000);
 }
 
-function CheckShots()
+function checkShots()
 {
     var t = setInterval(function()
     {
