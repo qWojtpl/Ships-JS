@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+@keyframes text-pulse {
+    0% {
+        color: black;
+    }
+    25% {
+        color: rgb(182, 182, 0);
+    }
+    100% {
+        color: black;
+    }
+}
+
+* {
+    font-family: 'Inter', 'sans-serif';
+    box-sizing: unset;
+}
+
+td, th {
+    width: 25px;
+    height: 25px;
+}
+
+td:hover {
+    cursor: pointer;
+}
+
+tr, td, th {
+    border: 1px solid black;
+    margin: 0;
+    padding: 5px;
+}
+
+table {
+    text-align: center;
+    float: left;
+    padding-right: 50px;
+    box-sizing: unset;
+    border-collapse: unset;
+}
+
+table.maps {
+    width: 75%;
+    border: none;
+    margin-left: 12.5%;
+    margin-right: auto;
+}
+
+td.maps {
+    max-width: 50%;
+    width: 50%;
+    border: none; 
+    padding-left: 6.25%;
+    text-align: left;
+}
+
+td.maps:hover {
+    cursor: default;
+}
+
+.mapElement {
+    transition: .3s;
+    background-color: white;
+}
+
+.Ship {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding-right: 0px;
+}
+
+p#title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 30px;
+}
+
+#callback {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#overlay {
+    opacity: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    display: flex;
+    margin: 0;
+}
+
+#overlay_table {
+    opacity: 0;
+    width: 60%;
+    height: fit-content;
+    top: 15%;
+    left: 20%;
+    margin: 0;
+    position: fixed;
+    display: flex;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+#overlay_content {
+    display: block;
+    margin: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#overlay_content input
+{
+    border: 1px solid black;
+}
+
+.is-invalid {
+    max-width: 100%;
+}
+
+#overlay_exit 
+{
+    position: fixed;
+    left: 77%;
+    top: 17%;
+    font-size: 28px;
+    color: black;
+    transition: .3s;
+}
+
+#overlay_exit:hover {
+    color: rgb(175, 175, 175);
+    cursor: pointer;
+}
+
+#ping {
+    left: 1%;
+    bottom: 2%;
+    top: 96%;
+    position: fixed;
+}
+
+#exit {
+    display: none;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    border: 2px solid black;
+    width: 150px;
+    height: 70px;
+    padding: 10px;
+}
+
+#exit p {
+    text-align: center;
+    padding: 12px 0;
+}
+
+#exit:hover {
+    color: rgba(255, 129, 129, 0.875);
+    cursor: pointer;
+}
+
+#tooSmallScreen {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    margin: none;
+    position: fixed;
+    background-color: white;
+    display: none;
+}
+
+#tooSmallScreen p {
+    text-align: center;
+    padding-top: 10%;
+    font-size: 28px;
+}
+
+#create_game {
+    color: black;
+    position: fixed;
+    top: 90%;
+    left: 40%;
+    width: 20%;
+    height: 10%;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 1%;
+}
+
+#create_game span {
+    font-weight: bold;
+    color: blue;
+    transition: .3s;
+}
+
+#create_game span:hover {
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+}
+
+#gameIDcallback {
+    margin-bottom: 10%;
+}
+
+#searchForOpenedGames {
+    transition: .3s;
+    animation-name: text-pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#searchForOpenedGames:hover {
+    cursor: pointer;
+    color: yellow;
+}
+
+#gameList {
+    overflow: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+}
+
+#gameList table {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 2px;
+}
+
+#gameList td, #gameList tr, #gameList th {
+    width: auto;
+    height: auto;
+}
+
+form#gameCode {
+
+}
